@@ -5,13 +5,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import newBest.NewBestController;
-import newBest.service.NewBestServiceImpl;
 
 public class Main extends Application{
 	public static void main(String[] args) {
 		launch(args);
 	}
+	
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -24,6 +23,7 @@ public class Main extends Application{
 		primaryStage.setTitle("main");
 		primaryStage.setScene(new Scene(mainForm));
 		primaryStage.show();
+		
 
 	}
 	
