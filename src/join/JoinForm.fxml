@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane fx:id="join2" focusTraversable="true" prefHeight="200.0" prefWidth="200.0" scaleX="0.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="338.0" layoutY="54.0" onMouseClicked="#gotoMainProc" text="Library">
+               <font>
+                  <Font size="37.0" />
+               </font>
+            </Label>
+            <Label layoutX="261.0" layoutY="416.0" text="생년월일">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="262.0" layoutY="507.0" text="성별">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="262.0" layoutY="576.0" text="휴대전화">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="idText" layoutX="261.0" layoutY="155.0" prefHeight="43.0" prefWidth="278.0" promptText="아이디">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <TextField fx:id="nameText" layoutX="261.0" layoutY="357.0" prefHeight="43.0" prefWidth="278.0" promptText="이름" />
+            <TextField fx:id="phoneText" layoutX="262.0" layoutY="595.0" prefHeight="34.0" prefWidth="278.0" promptText="' - ' 제외하고 입력해주세요" />
+            <PasswordField fx:id="pwText" layoutX="262.0" layoutY="224.0" prefHeight="43.0" prefWidth="278.0" promptText="비밀번호" />
+            <PasswordField fx:id="pwConfirmText" layoutX="261.0" layoutY="287.0" prefHeight="43.0" prefWidth="278.0" promptText="비밀번호 재확인" />
+            <RadioButton fx:id="genderM" layoutX="260.0" layoutY="539.0" mnemonicParsing="false" selected="true" text="남자">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="gender" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="genderF" layoutX="331.0" layoutY="539.0" mnemonicParsing="false" text="여자" toggleGroup="$gender">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <Button fx:id="joinButton" layoutX="264.0" layoutY="696.0" mnemonicParsing="false" onMouseClicked="#joinButtonProc" prefHeight="43.0" prefWidth="278.0" style="-fx-background-color: skyblue;" text="가입하기" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="473.0" layoutY="777.0" text="All Rights Reserved." />
+            <Label layoutX="384.0" layoutY="776.0" text="library Corp" />
+            <Label layoutX="312.0" layoutY="776.0" text="copyright" />
+            <Label layoutX="198.0" layoutY="776.0" text="하늘하늘도서관" textFill="#1c6fb4">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="comfirmId" layoutX="570.0" layoutY="155.0" mnemonicParsing="false" onMouseClicked="#confirmIdProc" prefHeight="43.0" prefWidth="86.0" style="-fx-background-color: skyblue;" text="중복확인" />
+            <ComboBox fx:id="yearCombo" layoutX="260.0" layoutY="444.0" prefHeight="43.0" prefWidth="86.0" />
+            <ComboBox fx:id="monthCombo" layoutX="357.0" layoutY="444.0" prefHeight="43.0" prefWidth="86.0" />
+            <ComboBox fx:id="dayCombo" layoutX="459.0" layoutY="444.0" prefHeight="43.0" prefWidth="86.0" />
+            <Label layoutX="264.0" layoutY="637.0" text="비밀번호 찾기 힌트">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="pwHintCombo" layoutX="264.0" layoutY="656.0" prefHeight="23.0" prefWidth="130.0" />
+            <TextField fx:id="pwHintText" layoutX="402.0" layoutY="656.0" prefHeight="23.0" prefWidth="137.0" />
+            <Label layoutX="427.0" layoutY="507.0" text="선호 장르" />
+            <ComboBox fx:id="genreCombo" layoutX="423.0" layoutY="534.0" prefHeight="29.0" prefWidth="116.0" />
+            <Label fx:id="comfirmMes" layoutX="259.0" layoutY="198.0" prefHeight="19.0" prefWidth="176.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="join1" prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: white;">
+         <children>
+            <StackPane fx:id="sp1" layoutX="185.0" layoutY="176.0" prefHeight="34.0" prefWidth="412.0">
+               <children>
+                  <CheckBox fx:id="checkAll0" mnemonicParsing="false" onMouseClicked="#checkAll1" text="도서관 이용약관, 개인정보 수집 및 이용에 모두 동의합니다.">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox fx:id="checkAll00" mnemonicParsing="false" onMouseClicked="#checkAll2" scaleX="0.0" text="도서관 이용약관, 개인정보 수집 및 이용에 모두 동의합니다.">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </CheckBox>
+               </children>
+            </StackPane>
+            <CheckBox fx:id="check1" layoutX="196.0" layoutY="239.0" mnemonicParsing="false" onMouseClicked="#checkAgree" text="도서관 이용약관 동의 (필수)" />
+            <Label layoutX="338.0" layoutY="90.0" text="Library">
+               <font>
+                  <Font size="37.0" />
+               </font>
+            </Label>
+            <TextArea cacheShape="false" editable="false" layoutX="200.0" layoutY="266.0" prefHeight="100.0" prefWidth="400.0" text="여러분을 환영합니다.&#10;도서관 서비스 및 제품(이하 ‘서비스’)을 이용해 주셔서 감사합니다.&#10;본 약관은 다양한 네이버 서비스의 이용과 관련하여 도서관 서비스를&#10;제공하는 도서관 주식회사(이하 ‘도서관’)와 이를 이용하는 네이버&#10;서비스 회원(이하 ‘회원’) 또는 비회원과의 관계를 설명하며,&#10;아울러 여러분의 도서관 서비스 이용에 도움이 될 수 있는 유익한&#10;정보를 포함하고 있습니다." />
+            <TextArea editable="false" layoutX="200.0" layoutY="447.0" prefHeight="100.0" prefWidth="400.0" text="개인정보보호법에 따라 네이버에 회원가입 신청하시는 분께&#10;수집하는 개인정보의 항목, 개인정보의 수집 및 이용목적,&#10;개인정보의 보유 및 이용기간, 동의 거부권 및 동의 거부 시 &#10;불이익에 관한 사항을 안내 드리오니 자세히 읽은 후&#10;동의하여 주시기 바랍니다." />
+            <Button fx:id="cancelButton" layoutX="194.0" layoutY="617.0" mnemonicParsing="false" onMouseClicked="#gotoMainProc" prefHeight="69.0" prefWidth="166.0" text="취소">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="confirmButton" layoutX="425.0" layoutY="617.0" mnemonicParsing="false" onMouseClicked="#gotoJoinProc" prefHeight="69.0" prefWidth="166.0" text="확인">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Label layoutX="185.0" layoutY="779.0" text="하늘하늘도서관" textFill="#1c6fb4">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="290.0" layoutY="779.0" text="copyright" />
+            <Label layoutX="370.0" layoutY="779.0" text="library Corp" />
+            <Label layoutX="462.0" layoutY="779.0" text="All Rights Reserved." />
+            <CheckBox fx:id="check2" layoutX="196.0" layoutY="424.0" mnemonicParsing="false" onMouseClicked="#checkAgree" text="개인정보 수집 이용 동의 (필수)" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

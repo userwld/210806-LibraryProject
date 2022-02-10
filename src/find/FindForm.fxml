@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="338.0" layoutY="115.0" text="Library">
+               <font>
+                  <Font size="37.0" />
+               </font>
+            </Label>
+            <Label layoutX="108.0" layoutY="225.0" text="아이디 찾기">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="161.0" layoutY="276.0" text="이름">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nameText" layoutX="251.0" layoutY="274.0" prefHeight="23.0" prefWidth="194.0" />
+            <Label layoutX="161.0" layoutY="328.0" text="전화번호">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="phone1Text" layoutX="251.0" layoutY="326.0" prefHeight="23.0" prefWidth="194.0" />
+            <Button fx:id="findIdButton" layoutX="484.0" layoutY="326.0" mnemonicParsing="false" onMouseClicked="#findIdProc" prefHeight="23.0" prefWidth="88.0" style="-fx-background-color: skyblue;" text="id찾기" />
+            <Label layoutX="107.0" layoutY="432.0" text="비밀번호 찾기">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="164.0" layoutY="482.0" text="id">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="idText" layoutX="251.0" layoutY="480.0" prefHeight="23.0" prefWidth="194.0" />
+            <Label layoutX="161.0" layoutY="529.0" text="전화번호">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="phone2Text" layoutX="251.0" layoutY="527.0" prefHeight="23.0" prefWidth="194.0" />
+            <Button fx:id="findPwText" layoutX="484.0" layoutY="610.0" mnemonicParsing="false" onMouseClicked="#findPwProc" prefHeight="23.0" prefWidth="88.0" style="-fx-background-color: skyblue;" text="pw찾기" />
+            <HBox layoutX="191.0" layoutY="777.0" prefHeight="19.0" prefWidth="450.0" spacing="3.0">
+               <children>
+                  <Label text="하늘하늘도서관" textFill="#1c6fb4">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="copyright" />
+                  <Label text="library Corp" />
+                  <Label prefHeight="19.0" prefWidth="148.0" text="All Rights Reserved." />
+               </children>
+            </HBox>
+            <Label layoutX="163.0" layoutY="577.0" text="힌트">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="hintText" layoutX="251.0" layoutY="610.0" prefHeight="23.0" prefWidth="194.0" />
+            <Button fx:id="loginButton" layoutX="317.0" layoutY="694.0" mnemonicParsing="false" onMouseClicked="#gotoLoginProc" prefHeight="43.0" prefWidth="167.0" style="-fx-background-color: skyblue;" text="로그인">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="pwHintCombo" layoutX="251.0" layoutY="575.0" prefHeight="23.0" prefWidth="194.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

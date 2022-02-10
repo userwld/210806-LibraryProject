@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <VBox prefHeight="91.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="26.0" prefWidth="90.0" text="이벤트">
+               <font>
+                  <Font size="22.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="265.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="15.0" prefWidth="61.0" text="제목 : ">
+                     <HBox.margin>
+                        <Insets left="20.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="titleText" prefHeight="33.0" prefWidth="507.0" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="27.0" prefWidth="600.0">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="129.0" text="작성자 : ">
+                     <HBox.margin>
+                        <Insets left="20.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="nameText" />
+                  <Label prefHeight="21.0" prefWidth="114.0" text="날짜 : ">
+                     <HBox.margin>
+                        <Insets left="30.0" top="5.0" />
+                     </HBox.margin></Label>
+                  <TextField fx:id="dayText" prefHeight="33.0" prefWidth="278.0">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <Separator prefWidth="600.0">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </Separator>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <HBox prefHeight="100.0" prefWidth="180.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="imgText">
+               <HBox.margin>
+                  <Insets top="90.0" />
+               </HBox.margin>
+            </TextField>
+            <VBox prefHeight="176.0" prefWidth="406.0" style="-fx-border-color: skyblue; -fx-border-width: 3;">
+               <children>
+                  <TextArea fx:id="textText" prefHeight="232.0" prefWidth="400.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+   <bottom>
+      <HBox prefHeight="49.0" prefWidth="430.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="okWrite" mnemonicParsing="false" onMouseClicked="#okWriteEvent" prefHeight="33.0" prefWidth="79.0" text="등록">
+               <HBox.margin>
+                  <Insets left="95.0" top="8.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <BorderPane.margin>
+            <Insets left="170.0" />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+</BorderPane>

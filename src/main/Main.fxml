@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.ImageInput?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.MainController">
+   <bottom>
+      <HBox prefHeight="60.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="100.0" prefWidth="758.0">
+               <HBox.margin>
+                  <Insets left="50.0" right="45.0" />
+               </HBox.margin>
+               <children>
+                  <Label text="주소 - 서울시 동작구 노량진동" />
+                  <Label text="copyright@ Library All Rights Reserved." />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </bottom>
+   <top>
+      <VBox prefHeight="120.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox maxHeight="-Infinity" prefHeight="60.0" prefWidth="800.0">
+               <children>
+                  <ImageView fx:id="logoImage" fitHeight="60.0" fitWidth="160.0" onMouseClicked="#openMainForm" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/logo.jpg" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin></ImageView>
+                  <HBox alignment="TOP_RIGHT" prefHeight="60.0" prefWidth="362.0">
+                     <HBox.margin>
+                        <Insets left="300.0" />
+                     </HBox.margin>
+                     <children>
+                        <Label fx:id="loginLabel" alignment="CENTER" maxWidth="154.0" onMouseClicked="#openLoginForm" prefHeight="40.0" prefWidth="154.0" text="로그인" wrapText="true">
+                           <HBox.margin>
+                              <Insets left="40.0" top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="registerLabel" onMouseClicked="#openJoinForm" prefHeight="40.0" prefWidth="143.0" text="회원가입" wrapText="true">
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" onMouseEntered="#closeViewBox" prefHeight="60.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="findText" alignment="CENTER" prefHeight="20.0" prefWidth="600.0" promptText="책 이름을 검색해주세요.">
+                     <HBox.margin>
+                        <Insets left="50.0" right="20.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="findButton" mnemonicParsing="false" onMouseClicked="#openSearchForm" text="도서 검색">
+                     <HBox.margin>
+                        <Insets right="45.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="56.0" prefWidth="705.0">
+               <children>
+                  <Label fx:id="newBestLabel" alignment="CENTER" contentDisplay="CENTER" maxHeight="40.0" maxWidth="200.0" onMouseClicked="#openNew" onMouseEntered="#openViewBox" prefWidth="180.0" style="-fx-background-color: FCD8D4; -fx-border-color: #EAEAEA; -fx-border-radius: 20; -fx-background-radius: 20;" text="신간/베스트셀러">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="introLabel" alignment="CENTER" contentDisplay="CENTER" maxHeight="40.0" maxWidth="200.0" onMouseClicked="#openIntroForm" onMouseEntered="#openViewBox" prefWidth="180.0" style="-fx-background-color: FDF6F0; -fx-border-color: #EAEAEA; -fx-background-radius: 20; -fx-border-radius: 20;" text="도서관 소개">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="announceLabel" alignment="CENTER" contentDisplay="CENTER" maxHeight="40.0" maxWidth="200.0" onMouseClicked="#openNoticeForm" onMouseEntered="#openViewBox" prefWidth="180.0" style="-fx-background-color: F8E2CF; -fx-border-color: #EAEAEA; -fx-background-radius: 20; -fx-border-radius: 20;" text="공지사항">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="MyLabel" alignment="CENTER" contentDisplay="CENTER" maxHeight="40.0" maxWidth="200.0" onMouseClicked="#openPartForm" onMouseEntered="#openViewBox" prefWidth="180.0" style="-fx-background-color: F5C6AA; -fx-border-color: #EAEAEA; -fx-background-radius: 20; -fx-border-radius: 20;" text="나만의 도서관">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <StackPane prefHeight="250.0" prefWidth="250.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label alignment="CENTER" layoutY="30.0" prefHeight="28.0" prefWidth="138.0" style="-fx-background-color: F8E2CF; -fx-background-radius: 10; -fx-border-color: #EAEAEA; -fx-border-radius: 10;" text="이달의 신간">
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Arial Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <HBox maxHeight="300.0" prefHeight="251.0" prefWidth="705.0" style="-fx-background-color: FDF6F0;">
+                           <children>
+                              <ImageView fx:id="newImage1" fitHeight="190.0" fitWidth="140.0" onMouseClicked="#openPreview1" onMouseEntered="#sizeUpImage1" onMouseExited="#sizeDownImage1">
+                                 <HBox.margin>
+                                    <Insets left="20.0" top="20.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <ImageView fx:id="newImage2" fitHeight="190.0" fitWidth="140.0" onMouseClicked="#openPreview2" onMouseEntered="#sizeUpImage2" onMouseExited="#sizeDownImage2">
+                                 <HBox.margin>
+                                    <Insets left="30.0" top="20.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <ImageView fx:id="newImage3" fitHeight="190.0" fitWidth="140.0" onMouseClicked="#openPreview3" onMouseEntered="#sizeUpImage3" onMouseExited="#sizeDownImage3">
+                                 <HBox.margin>
+                                    <Insets left="30.0" top="20.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <ImageView fx:id="newImage4" fitHeight="190.0" fitWidth="140.0" onMouseClicked="#openPreview4" onMouseEntered="#sizeUpImage4" onMouseExited="#sizeDownImage4">
+                                 <HBox.margin>
+                                    <Insets left="30.0" top="20.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                     </children>
+                     <StackPane.margin>
+                        <Insets bottom="10.0" />
+                     </StackPane.margin>
+                  </VBox>
+                  <HBox fx:id="viewBox" maxHeight="110.0" onMouseExited="#closeViewBox" prefHeight="110.0" prefWidth="705.0" scaleY="0.0" spacing="90.0" style="-fx-background-color: white;">
+                     <StackPane.margin>
+                        <Insets bottom="120.0" />
+                     </StackPane.margin>
+                     <children>
+                        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                           <children>
+                              <Label fx:id="newBookLabel" onMouseClicked="#openNew" text="신간" />
+                              <Label fx:id="bestBookLabel" onMouseClicked="#openBest1" text="국내베스트" />
+                              <Label fx:id="categoryLabel" onMouseClicked="#openBest2" text="해외베스트" />
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                           <children>
+                              <Label fx:id="historyLabel" onMouseClicked="#openIntroForm" text="이용안내" />
+                              <Label fx:id="ruleLabel" onMouseClicked="#openRule" text="운영원칙" wrapText="true" />
+                              <Label fx:id="interiorLabel" onMouseClicked="#openInterior" text="내부사진" />
+                              <Label fx:id="interiorLabel1" onMouseClicked="#openRoot" text="오시는 길" />
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets top="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                           <children>
+                              <Label fx:id="newsLabel" onMouseClicked="#openNoticeForm" text="공지사항" />
+                              <Label fx:id="holidayLabel" onMouseClicked="#openEvent" text="이벤트" />
+                           </children>
+                           <HBox.margin>
+                              <Insets top="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" />
+                     </children>
+                     <padding>
+                        <Insets bottom="60.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </StackPane>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="705.0">
+               <children>
+                  <Label fx:id="chartLabel" alignment="CENTER" contentDisplay="BOTTOM" prefHeight="28.0" prefWidth="192.0" style="-fx-background-color: F8E2CF; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: #EAEAEA;" text="인기 장르">
+                     <font>
+                        <Font name="Arial" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="BOTTOM" prefHeight="26.0" prefWidth="149.0" style="-fx-background-color: F8E2CF; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: #EAEAEA;" text="최근 공지사항">
+                     <font>
+                        <Font name="Arial" size="22.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="230.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Button fx:id="newButton" mnemonicParsing="false" onMouseClicked="#openNewList" prefHeight="29.0" prefWidth="32.0" text="Button">
+                     <effect>
+                        <ImageInput>
+                           <source>
+                              <Image url="file:/C:/java_folder/workspace/project/src/img/newnew.jpg" />
+                           </source>
+                        </ImageInput>
+                     </effect>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <StackPane prefHeight="248.0" prefWidth="769.0">
+               <children>
+                  <HBox prefHeight="219.0" prefWidth="705.0" spacing="10.0" style="-fx-background-color: FDF6F0;">
+                     <children>
+                        <PieChart fx:id="pieChart" maxHeight="215.0" prefHeight="220.0" prefWidth="350.0">
+                           <HBox.margin>
+                              <Insets left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </PieChart>
+                        <ListView fx:id="recentList" maxHeight="200.0" prefHeight="200.0" prefWidth="260.0">
+                           <HBox.margin>
+                              <Insets left="50.0" top="10.0" />
+                           </HBox.margin>
+                        </ListView>
+                     </children>
+                  </HBox>
+                  <BarChart fx:id="barChart" legendVisible="false" maxHeight="215.0" maxWidth="350.0" prefHeight="219.0" prefWidth="350.0" scaleX="0.0" titleSide="LEFT">
+                    <xAxis>
+                      <CategoryAxis tickLabelGap="2.0" tickLength="15.0" tickMarkVisible="false" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                     <StackPane.margin>
+                        <Insets right="340.0" top="10.0" />
+                     </StackPane.margin>
+                  </BarChart>
+                  <LineChart fx:id="lineChart" maxHeight="215.0" maxWidth="350.0" scaleX="0.0">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                     <StackPane.margin>
+                        <Insets right="340.0" top="10.0" />
+                     </StackPane.margin>
+                  </LineChart>
+                  <VBox alignment="CENTER" maxHeight="200.0" maxWidth="200.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent;">
+                     <StackPane.margin>
+                        <Insets left="80.0" top="10.0" />
+                     </StackPane.margin>
+                     <children>
+                        <Label fx:id="moreLabel" alignment="CENTER" style="-fx-text-fill: transparent;" text="show more!">
+                           <VBox.margin>
+                              <Insets bottom="20.0" right="50.0" top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Button fx:id="moreButton" alignment="CENTER" maxHeight="40.0" maxWidth="40.0" mnemonicParsing="false" onMouseClicked="#showChart" onMouseEntered="#showMoreLabel" onMouseExited="#exitMoreLabel" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: transparent;">
+                           <VBox.margin>
+                              <Insets bottom="60.0" right="50.0" />
+                           </VBox.margin>
+                           <effect>
+                              <DropShadow blurType="ONE_PASS_BOX" color="#d79999" height="20.0" radius="9.5" width="20.0">
+                                 <input>
+                                    <InnerShadow color="#ffb3b3" />
+                                 </input>
+                              </DropShadow>
+                           </effect>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </StackPane>
+         </children>
+      </VBox>
+   </center>
+   <left>
+      <VBox prefHeight="200.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <VBox prefHeight="200.0" prefWidth="45.0" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>

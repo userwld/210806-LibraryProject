@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <VBox prefHeight="180.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox maxHeight="-Infinity" prefHeight="51.0" prefWidth="800.0">
+               <children>
+                  <ImageView fx:id="logoImage" fitHeight="60.0" fitWidth="160.0" onMouseClicked="#clickLogo" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/logo.jpg" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin></ImageView>
+                  <HBox alignment="TOP_RIGHT" prefHeight="60.0" prefWidth="362.0">
+                     <HBox.margin>
+                        <Insets left="300.0" />
+                     </HBox.margin>
+                     <children>
+                        <Label fx:id="loginLabel" alignment="CENTER" maxWidth="154.0" onMouseClicked="#openLoginForm" prefHeight="40.0" prefWidth="154.0" text="로그인" wrapText="true">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="40.0" top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="registerLabel" onMouseClicked="#openJoinForm" prefHeight="40.0" prefWidth="143.0" text="회원가입" wrapText="true">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="findText" alignment="CENTER" prefHeight="20.0" prefWidth="600.0" promptText="책 이름을 검색해주세요.">
+                     <HBox.margin>
+                        <Insets left="50.0" right="20.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="findButton" mnemonicParsing="false" onMouseClicked="#openSearchForm" text="도서 검색">
+                     <HBox.margin>
+                        <Insets right="45.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="56.0" prefWidth="705.0">
+               <children>
+                  <Label fx:id="newBestLabel" alignment="CENTER" contentDisplay="CENTER" maxHeight="40.0" maxWidth="200.0" onMouseClicked="#openNewBestForm" prefWidth="180.0" style="-fx-background-color: FCD8D4; -fx-border-color: #EAEAEA; -fx-border-radius: 20; -fx-background-radius: 20;" text="신간/베스트셀러">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="introLabel" alignment="CENTER" contentDisplay="CENTER" maxHeight="40.0" maxWidth="200.0" prefWidth="180.0" style="-fx-background-color: FDF6F0; -fx-border-color: #EAEAEA; -fx-background-radius: 20; -fx-border-radius: 20;" text="도서관 소개">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="announceLabel" alignment="CENTER" contentDisplay="CENTER" maxHeight="40.0" maxWidth="200.0" onMouseClicked="#openNoticeForm" prefWidth="180.0" style="-fx-background-color: F8E2CF; -fx-border-color: #EAEAEA; -fx-background-radius: 20; -fx-border-radius: 20;" text="공지사항">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="myLabel" alignment="CENTER" contentDisplay="CENTER" maxHeight="40.0" maxWidth="200.0" onMouseClicked="#openPartForm" prefWidth="180.0" style="-fx-background-color: F5C6AA; -fx-border-color: #EAEAEA; -fx-background-radius: 20; -fx-border-radius: 20;" text="나만의 도서관">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <left>
+      <VBox prefHeight="580.0" prefWidth="150.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lab1" onMouseClicked="#openIntroForm" onMouseEntered="#labEntered1" onMouseExited="#labExited1" prefHeight="30.0" prefWidth="120.0" text="이용안내">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="30.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="lab2" onMouseClicked="#openIntro2Box" onMouseEntered="#labEntered2" onMouseExited="#labExited2" prefHeight="30.0" prefWidth="120.0" text="운영원칙">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="30.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="lab3" onMouseClicked="#openIntro3Box" onMouseEntered="#labEntered3" onMouseExited="#labExited3" prefHeight="30.0" prefWidth="120.0" text="내부사진">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="30.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="lab4" onMouseClicked="#openIntro4Box" onMouseEntered="#labEntered4" onMouseExited="#labExited4" prefHeight="30.0" prefWidth="120.0" text="오시는 길">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="30.0" />
+               </VBox.margin>
+            </Label>
+         </children></VBox>
+   </left>
+   <center>
+      <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox fx:id="intro1Box" prefHeight="200.0" prefWidth="100.0" scaleY="0.0">
+               <children>
+                  <Label prefHeight="31.0" prefWidth="89.0" text="운영 원칙">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="144.0" fitWidth="601.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/intro2.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="- 운영의 전문성과 투명하고 합리적인 운영을 통하여 건강하고 슬기로운 삶을 추구할 수 있도록 하고자 함.">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin></Label>
+                  <Label text="운영 방침">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="시민이 책과 문화를 즐기는 도서관">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="- 공공도서관의 질적 확충">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin></Label>
+                  <Label text="- 공공도서관 이용환경 개선">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin></Label>
+                  <Label text="- 도서관 관련 제도 정비">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="10.0" />
+                     </VBox.margin></Label>
+                  <Label text="누구나 배우고 나누어 성장하는 도서관">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="-독서외인서비스 강화">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin></Label>
+                  <Label text="- 공공도서관 장서 확충">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin></Label>
+                  <Label text="- 독서, 문화 프로그램 확대">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="10.0" />
+                     </VBox.margin></Label>
+                  <Label text="더불어 협력하여 상생하는 도서관">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="- 독서동아리 활동 지원">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin></Label>
+                  <Label text="- 시민 협력 네트워크 구축">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="10.0" />
+                     </VBox.margin></Label>
+                  <Label text="추진 전략">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="- 시민의 공공도서관 향유권을 보장하기 위한 도서관 인프라 구축">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin></Label>
+                  <Label text="- 시민의 독서, 문화, 평생학습을 위한 콘텐츠 강화">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin></Label>
+                  <Label text="- 시민 및 도서관 관련 기관, 단체 간의 교류와 협력으로 책읽는 문화 확산">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin></Label>
+                  <Label style="-fx-background-color: #CEF76E;" text="시민의 아는 힘을 키워 지혜로원 지식문화도시 비전 달성">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox fx:id="intro2Box" prefHeight="429.0" prefWidth="650.0" scaleY="0.0">
+               <children>
+                  <Label fx:id="newBestLabel1" alignment="CENTER" contentDisplay="CENTER" maxHeight="36.0" maxWidth="132.0" prefHeight="36.0" prefWidth="132.0" style="-fx-background-color: #FFCBCB;" text="내부사진">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label prefHeight="22.0" prefWidth="126.0" text="문헌정보실">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="199.0" fitWidth="278.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/intro4.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="198.0" fitWidth="311.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/intro3.jpg" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="디지털•간행물실">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="15.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <ImageView fitHeight="171.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/intro8.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="어린이•다누리실">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="10.0" top="15.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <ImageView fitHeight="170.0" fitWidth="327.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/intro7.jpg" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                           </children>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox fx:id="intro3Box" prefHeight="429.0" prefWidth="650.0" scaleY="0.0">
+               <children>
+                  <Label fx:id="newBestLabel1" alignment="CENTER" contentDisplay="CENTER" maxHeight="36.0" maxWidth="163.0" prefHeight="36.0" prefWidth="163.0" style="-fx-background-color: #FFFFA1;" text="찾아오시는 길">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label prefHeight="22.0" prefWidth="456.0" text="주소 : OO시 OO구 OO로 X길 XX">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ImageView fitHeight="472.0" fitWidth="458.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/map.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets left="15.0" />
+                     </VBox.margin>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox fx:id="intro4Box" prefHeight="429.0" prefWidth="650.0">
+               <children>
+                  <Label prefHeight="49.0" prefWidth="89.0" text="이용시간">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ImageView fitHeight="219.0" fitWidth="632.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/intro1.jpg" />
+                     </image>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Label text="휴관일">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="- 자료실 및 자율학습실 : 매월 둘째, 넷째 월요일 휴관, 법정공휴일(일요일을 제외한 관공서의 공휴일)">
+                     <VBox.margin>
+                        <Insets left="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="   단, 일요일과 다른 공휴일이 겹칠 경우 휴관">
+                     <VBox.margin>
+                        <Insets left="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="- 평생학습교실 : 법정 공휴일과 매주 월요일, 일요일 휴강">
+                     <VBox.margin>
+                        <Insets left="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="- 임시휴관일 : 관장이 도서의 정리, 보수공사, 장서점검 및 기타의 사유로 휴관이 필요하다고 인정하는 날">
+                     <VBox.margin>
+                        <Insets left="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="도서대출">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="- 대출 권수 : 1인당 3권">
+                     <VBox.margin>
+                        <Insets left="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="- 대출 기간 : 14일">
+                     <VBox.margin>
+                        <Insets left="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="도서반납">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="- 반납 예정일이 휴관일인 경우, 다음날 반납 가능">
+                     <VBox.margin>
+                        <Insets left="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="- 대출도서를 분실, 훼손하였을 경우 현물 변상">
+                     <VBox.margin>
+                        <Insets left="15.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

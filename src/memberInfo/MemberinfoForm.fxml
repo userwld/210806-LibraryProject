@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane prefHeight="800.0" prefWidth="800.0">
+         <top>
+            <HBox alignment="BOTTOM_CENTER" prefHeight="101.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label onMouseClicked="#gotoMainProc" text="Library">
+                     <font>
+                        <Font size="37.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </top>
+         <left>
+            <HBox prefHeight="500.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+         </left>
+         <bottom>
+            <VBox alignment="CENTER" prefHeight="77.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                        <Label text="하늘하늘도서관" textFill="#1c6fb4" />
+                        <Label text="copyright" />
+                        <Label text="library Corp" />
+                        <Label text="All Rights Reserved." />
+                     </children>
+                  </HBox>
+               </children></VBox>
+         </bottom>
+         <center>
+            <VBox prefHeight="642.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="600.0" spacing="10.0">
+                     <children>
+                        <Label text="이름:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="nameLabel" text="nameLabel">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="10.0">
+                     <children>
+                        <Label text="id:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="idLabel" text="idLabel">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="600.0" spacing="10.0">
+                     <children>
+                        <Label text="핸드폰 번호: ">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="phoneLabel" text="phoneLabel">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="600.0">
+                     <children>
+                        <Label text="대여 현황" />
+                        <HBox alignment="CENTER_RIGHT" prefHeight="37.0" prefWidth="535.0">
+                           <children>
+                              <Button mnemonicParsing="false" onMouseClicked="#listClick" prefHeight="29.0" prefWidth="87.0" text="조회" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="23.0" prefWidth="600.0">
+                     <children>
+                        <HBox prefHeight="23.0" prefWidth="119.0">
+                           <children>
+                              <Label text="책번호">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="책이름">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="대여일">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="반납일">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="131.0" prefWidth="600.0">
+                     <children>
+                        <ListView fx:id="bookNumList" prefHeight="131.0" prefWidth="65.0" />
+                        <ListView fx:id="booknameList" prefHeight="200.0" prefWidth="200.0" />
+                        <ListView fx:id="rentalList" prefHeight="200.0" prefWidth="200.0" />
+                        <ListView fx:id="returnList" prefHeight="200.0" prefWidth="200.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="51.0" prefWidth="600.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="51.0" prefWidth="204.0">
+                           <children>
+                              <Label text="책 번호 조회: " />
+                              <TextField fx:id="bookNumText" prefHeight="29.0" prefWidth="104.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="lookupButton" mnemonicParsing="false" onMouseClicked="#lookupProc" prefHeight="29.0" prefWidth="97.0" text="조회하기" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="143.0" prefWidth="600.0" spacing="40.0">
+                     <children>
+                        <Button fx:id="rentalButton" mnemonicParsing="false" onMouseClicked="#rentalProc" prefHeight="100.0" prefWidth="180.0" style="-fx-background-color: skyblue;" text="대여">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="returnButton" mnemonicParsing="false" onMouseClicked="#returnProc" prefHeight="100.0" prefWidth="180.0" style="-fx-background-color: skyblue;" text="반납">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets top="100.0" />
+               </padding>
+            </VBox>
+         </center>
+         <right>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

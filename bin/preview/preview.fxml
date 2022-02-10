@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <HBox alignment="CENTER" prefHeight="54.0" prefWidth="600.0" style="-fx-border-color: #00D8FF;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="booksintro" alignment="TOP_CENTER" text="책소개" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <VBox prefHeight="423.0" prefWidth="324.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="284.0" prefWidth="298.0">
+               <children>
+                  <HBox maxHeight="40.0" prefHeight="40.0" prefWidth="0.0">
+                     <children>
+                        <Label fx:id="stratdate" text="출간일 :">
+                           <font>
+                              <Font name="System Bold Italic" size="22.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="8.0" top="30.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="date" text="dateNo">
+                           <font>
+                              <Font name="System Bold Italic" size="22.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="8.0" top="30.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox maxHeight="40.0" prefHeight="40.0" prefWidth="324.0">
+                     <children>
+                        <Label fx:id="bookNo" text="도서 번호 :">
+                           <font>
+                              <Font name="System Bold Italic" size="22.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="8.0" top="30.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="bookNum" text="no">
+                           <font>
+                              <Font name="System Bold Italic" size="22.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="8.0" top="30.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="like" text="좋아요">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="15.0" top="30.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="0.0">
+                     <children>
+                        <Label fx:id="bookLacation" text="도서 위치 :">
+                           <font>
+                              <Font name="System Bold Italic" size="22.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="8.0" top="30.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="bookLocation" text="bookLocation">
+                           <font>
+                              <Font name="System Bold Italic" size="22.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="8.0" top="30.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="324.0">
+                     <children>
+                        <Label text="작 가 :">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="8.0" top="30.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="writer" text="writer1_1">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="30.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="65.0" prefWidth="324.0">
+                     <children>
+                        <Label text="▶">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="45.0" top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="findtext" onMouseClicked="#openarea" text="줄거리요약" textFill="#3f4ca1c2">
+                           <font>
+                              <Font name="Batang" size="25.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label text="◀">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+   <left>
+      <VBox prefHeight="273.0" prefWidth="276.0" style="-fx-border-color: #00D8FF;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="20.0" prefWidth="274.0">
+               <children>
+                  <Label fx:id="title" prefHeight="0.0" prefWidth="250.0" text="titile1">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <StackPane prefHeight="257.0" prefWidth="274.0">
+               <children>
+                  <ImageView fx:id="introimg" fitHeight="218.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../OneDrive/바탕%20화면/프로젝트/96570787-손으로-클릭-아이콘-.jpg" />
+                     </image>
+                  </ImageView>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <TextArea fx:id="findarea" editable="false" onMouseExited="#closearea" prefHeight="200.0" prefWidth="200.0" scaleY="0.0" text="&#10;&#10;" wrapText="true" />
+                     </children>
+                  </VBox>
+               </children>
+            </StackPane>
+         </children>
+      </VBox>
+   </left>
+   <bottom>
+      <HBox prefHeight="59.0" prefWidth="600.0" style="-fx-border-color: #00D8FF;" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="31.0" prefWidth="194.0" />
+            <HBox prefHeight="47.0" prefWidth="775.0">
+               <children>
+                  <Label fx:id="leview1" prefHeight="27.0" prefWidth="115.0" text="한 줄 리뷰 :">
+                     <font>
+                        <Font name="Bookshelf Symbol 7" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="2.0" top="13.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="review" prefHeight="28.0" prefWidth="474.0" text="leview1" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="13.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="10.0" />
+               </HBox.margin>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+</BorderPane>
